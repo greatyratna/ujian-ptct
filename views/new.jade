@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		title Daftar #{ucfirst(collection)}
+		link(rel='stylesheet', href='../css/bootstrap.min.css')
+		style .btn {margin:10px 10px 10px 0px;}
+	body
+		#container
+			div.col-md-8.col-md-offset-2
+				div.panel.panel-default
+					div.panel-heading Masukan data dokter
+					div.panel-body
+						form(method='post', action='./')
+							div.form-group
+								label(for='NPP') NPP
+								input(type='text', name='NPP', id='NPP', placeholder='NPP').form-control
+							div.form-group
+								label(for='NAMA') NAMA
+								input(type='text', name='NAMA', id='NAMA', placeholder='NAMA').form-control
+							div.form-group
+								label(for='SPESIALISASI') SPESIALISASI
+								input(type='text' name='SPESIALISASI', id='SPESIALISASI', placeholder='SPESIALISASI').form-control
+							div.form-group
+								label(for='ALAMAT') ALAMAT
+								input(type='text' name='ALAMAT', id='ALAMAT', placeholder='ALAMAT').form-control
+							input(type='submit', value='Tambahkan').btn.btn-success
+							a(href='/#{collection}', role='button').btn.btn-danger Batal
